@@ -6,6 +6,9 @@ int main() {
 	int sum=0;
 	int cnt=0;
 	
+	int max=0;
+	int min=100; //as you wish
+	
 	for(int i=0; i<5; i++){
 		a[i] = 0;
 		scanf("%d",&a[i]);
@@ -14,7 +17,18 @@ int main() {
 		if(a[i]>=80){
 			cnt++;
 		}
+		
+	//maximum number
+	if(max<a[i]){
+		max=a[i];
 	}
+	//minimum number
+	if(min>a[i]){
+		min=a[i];
+	}
+	}
+	
+	
 	
 	printf("\n\n***Before Sort***\n");
 	for(int i=0; i<5; i++){
@@ -22,6 +36,8 @@ int main() {
 	}
 	printf("\nSum=%d\n", sum);
 	printf("\n cnt=%d\n", cnt);
+	printf("\n max=%d\n", max);
+	printf("\n min=%d\n", min);
 	
 	//sort algorithm
 	
@@ -43,6 +59,7 @@ int main() {
 	}
 	printf("\nSum=%d\n", sum);
 	printf("\n cnt=%d\n", cnt);
+	
 	
 	//Descending sort
 	for(int i=0; i<5; i++){
