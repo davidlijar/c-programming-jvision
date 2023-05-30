@@ -15,6 +15,8 @@ void f(int x){
 		for(int i=1; i<=9; i++){
 			printf("%d x %d = %d\n",x,i,x*i);
 		}
+	}else{
+		printf("구구단이 아닙니다!");
 	}
 	
 }
