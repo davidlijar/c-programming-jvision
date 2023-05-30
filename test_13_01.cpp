@@ -27,9 +27,16 @@ void f(){
 	printf("Hello!");
 }
 int f1(){
+	int a = 10564;
+    int sum=0;
+    int divided = 11564;
+    for(int i=0;i<5; i++){
+    	int tem1 = divided%10;
+    	sum+=tem1;
+    	int tem2 =  divided/10;
+	}
 	
-	
-	return 10;
+	return sum;
 }
 float f2(){
 	return 14.45;
