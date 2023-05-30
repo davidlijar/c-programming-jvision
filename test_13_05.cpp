@@ -12,10 +12,10 @@ int main() {
 }
 
 int facto(int x){
-	int sum=1;
+	int fact=1;
 	for(int i=1; i<=x; i++){
-		sum*=i;
+		fact*=i;
 	}
 	
-	return sum;
+	return fact;
 }
