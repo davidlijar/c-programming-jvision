@@ -1,21 +1,22 @@
 #include <stdio.h>
 
 void f(int *a){
-	*a = *a + 1;
+	for(int i=0; i<10; i++){
+		//a[i]+=10;
+		*(a+i)+=10;
+	}
 }
 
+
 int main() {
-	int a=10;
-	int *p_a=&a;
+	int a[] = {1,2,3,4,5,6,7,8,9,10};
+	
+	f(a);
+	
+	for(int i=0; i<10; i++){
+		printf("%d ", a[i]);
+	}	
 	
 	
-	printf("%p\n", &a);
-	printf("%p\n", p_a);
-	
-	printf("%d\n", a);
-	printf("%d\n", *p_a);
-	
-	printf("a=%d\n", a);
-	f(&a);
-	printf("a=%d\n", a);
+	return 0;
 }
