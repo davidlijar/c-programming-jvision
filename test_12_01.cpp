@@ -6,8 +6,7 @@ int main() {
 	int sum=0;
 	int cnt=0;
 	
-	int max=0;
-	int min=100; //as you wish
+	int max,min;
 	
 	for(int i=0; i<5; i++){
 		a[i] = 0;
@@ -17,6 +16,9 @@ int main() {
 		if(a[i]>=80){
 			cnt++;
 		}
+		
+		max=a[0];
+		min=a[0];
 		
 	//maximum number
 	if(max<a[i]){
