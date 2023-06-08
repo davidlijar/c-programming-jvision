@@ -2,10 +2,11 @@
 
 int main() {
 	int a[5]={0};
-	int rank[5]={1,1,1,1,1};
+	int rank[5]={0};
 	
 	for(int i=0; i<5; i++){
 		a[i]=0;
+		rank[i]=1;
 		scanf("%d", &a[i]);
 	}	
 	

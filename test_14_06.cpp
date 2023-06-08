@@ -34,8 +34,8 @@ void ascSort(int *p){
 	//ascending sort
 	for(int i=0; i<5; i++){
 		for(int j=i+1; j<5; j++){
-			if(p[i]>p[j]){
-				swap(&p[i],&p[j]);
+			if(*(p+i)>*(p+j)){  //*(p+i)>*(p+j) is equal to p[i]>p[j]
+				swap(p+i,p+j);  // (p+i,p+j) is equal to (&p[i]>&p[j]
 			}
 		}
 	}
