@@ -3,15 +3,53 @@
 int f(int x, int y);
 void f1(int x);
 void f3(int x);
+void grade(int x);
+void factorial(int x);
+void numOfAlphabet(int x);
 
 int main() {
 	int n;
 	scanf("%d",&n);
-	f3(n);
+	numOfAlphabet(n);
 	
 	
 	
 	return 0;
+}
+
+void numOfAlphabet(int x){
+	char alphabetArr[x];
+	
+	for(int i=0; i<x; i++){
+		alphabetArr[i] = 'A'+i;
+	}
+	printf("%d Alphabet are %s ",x,alphabetArr);
+	
+}
+
+void factorial(int x){
+	int fac=1;
+	for(int i=x; i>0; i--){
+		fac*=i;
+	}
+	printf("Factorial of %d is %d", x,fac);
+}
+
+void grade(int x){
+	char grade;
+	if(x>=90){
+		grade='A';
+	}else if(x>=80){
+		grade='B';
+	}else if(x>=70){
+		grade='C';
+	}else if(x>=60){
+		grade='D';
+	}else{
+		grade='F';
+	}
+	
+	printf("This student got %c", grade);
 }
 
 int f(int x, int y){
