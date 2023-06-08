@@ -3,14 +3,39 @@
 void f1();
 void f2();
 
+void f3();
+
 int main() {
 	
 	
-	f2();
+	f3();
 	
 	
 	
 	return 0;
+}
+
+void f3(){
+	int data[] = {5,6,4,3,7};
+	int rank[]={0};
+	
+	//initial rank
+	for(int i=0; i<5; i++){
+		rank[i]=1;
+	}
+	
+	//search greater values than self and uprank
+	for(int i=0; i<5; i++){
+		for(int j=0; j<5; j++){
+			if(data[i]<data[j]){
+				rank[i]++;
+			}
+		}
+	}
+	
+	for(int i=0; i<5; i++){
+		printf("Num : %d, Rank : %d\n", data[i],rank[i]);
+	}
 }
 
 void f2() {
